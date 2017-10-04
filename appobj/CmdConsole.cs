@@ -1,19 +1,17 @@
-﻿using System;
+﻿using logger;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SimpleHttpServer.WebApp.Models
+namespace appobj
 {
     public delegate void Command(string[] args);
     public static class CmdConsole
     {
         public static List<ValuePair<string, Command>> CmdList = new List<ValuePair<string, Command>>();
         public static List<string> HelpStrings = new List<string>();
-        public static char CommandDelimiter = Program.ConsoleCfg.CommandDelimiter;
+        public static char CommandDelimiter = loader.Init.ConsoleCfg.CommandDelimiter;
         public static ObservableCollection<string> CommandQuery = new ObservableCollection<string>();
 
         public static void Start()
@@ -21,14 +19,14 @@ namespace SimpleHttpServer.WebApp.Models
             CommonCommands.IsInitialized = true;
             while (true)
             {
-                Console.Write(Program.ConsoleCfg.ConsoleReadyString);
+                Console.Write(loader.Init.ConsoleCfg.ConsoleReadyString);
                 CommandSelector(Console.ReadLine());
             }
         }
 
         public static void CommandSelector(string line)
         {
-            Logger.LogNoTrace(Program.ConsoleCfg.ConsoleReadyString + line);
+            Logger.LogNoTrace(loader.Init.ConsoleCfg.ConsoleReadyString + line);
             var temp = "";
             var index = 0;
             var isString = false;
@@ -234,8 +232,7 @@ namespace SimpleHttpServer.WebApp.Models
         public static void Quit(string[] args)
         {
             Logger.Log("Shuting down....");
-            Program.OnExit();
-            Program.ControlThread.Abort();
+            loader.Init.OnExit();
             Logger.Log("Exited control-thread.");
             Logger.Save();
             Logger.Log("Listener thread exited");

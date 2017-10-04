@@ -1,0 +1,8 @@
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\bin\Debug\logger.dll
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\bin\Debug\logger.pdb
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\bin\Debug\loader.dll
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\bin\Debug\loader.pdb
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\obj\Debug\logger.csproj.CoreCompileInputs.cache
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\obj\Debug\logger.dll
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\obj\Debug\logger.pdb
+C:\Users\sgyal\VS-git\WebC#\HttpServer-master\logger\obj\Debug\logger.csprojResolveAssemblyReference.cache

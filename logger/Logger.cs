@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleHttpServer.WebApp.Models
+using loader.Models.Configs;
+namespace logger
 {
-    internal static class Logger
+    public class Logger
     {
         public static volatile StringBuilder LogContent = new StringBuilder();
         public static volatile StringBuilder FullLog = new StringBuilder();
@@ -41,12 +38,12 @@ namespace SimpleHttpServer.WebApp.Models
             FullLog.Append("[" + DateTime.Now.ToLongTimeString() + "]");
             foreach (var arg in args)
             {
-                if (Program.Verbose)
+                if (loader.Init._cfg.Verbose)
                     Console.Write(arg);
                 LogContent.Append(arg);
                 FullLog.Append(arg);
             }
-            if (Program.Verbose)
+            if (loader.Init._cfg.Verbose)
                 Console.WriteLine();
             LogContent.AppendLine();
             FullLog.AppendLine();
@@ -84,7 +81,7 @@ namespace SimpleHttpServer.WebApp.Models
         static Logger()
         {
             Log("Logger initialized.");
-            Program.Exit += (x, y) => Save();
+            loader.Init.Exit += (x, y) => Save();
         }
 
         public static void SaveLog()
@@ -136,16 +133,16 @@ namespace SimpleHttpServer.WebApp.Models
         {
             while (true)
             {
-                if (!Program.PendingLogSave) continue;
+                if (!loader.Init.PendingLogSave) continue;
                 SaveLog();
-                Program.PendingLogSave = false;
+                loader.Init.PendingLogSave = false;
             }
         }
 
         public static void Save()
         {
-            if (Program._cfg.Asynchlog)
-                Program.PendingLogSave = true;
+            if (loader.Init._cfg.Asynchlog)
+                loader.Init.PendingLogSave = true;
             else
                 SaveLog();
         }

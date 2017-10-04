@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleHttpServer">
+      <HintPath>..\SimpleHttpServer\bin\Debug\SimpleHttpServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -54,12 +57,6 @@
     <Compile Include="HttpProcessorTest.cs" />
     <Compile Include="Mocks\MockHttpProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
-      <Project>{4fa45fb4-1b9b-4d5d-a2df-a8169e6ea43d}</Project>
-      <Name>SimpleHttpServer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

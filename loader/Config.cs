@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleHttpServer.WebApp.Models
+namespace loader
 {
     public class Config
     {
@@ -134,9 +134,10 @@ namespace SimpleHttpServer.WebApp.Models
 
             public Default()
             {
-                
             }
         }
+
+            
 
         public class Cmd : Config
         {

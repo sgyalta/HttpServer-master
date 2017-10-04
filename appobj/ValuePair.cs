@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleHttpServer.WebApp.Models
+namespace appobj
 {
     public class ValuePair<TLeft, TRight>
     {
