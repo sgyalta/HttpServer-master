@@ -1,4 +1,4 @@
-﻿namespace SimpleHttpServer.WebApp.Controllers
+﻿namespace Server.WebApp.Controllers
 {
     class Home
     {

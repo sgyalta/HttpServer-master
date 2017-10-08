@@ -1,7 +1,7 @@
-﻿using SimpleHttpServer.Models;
-using System.IO;
+﻿using System.IO;
+using Server.Models;
 
-namespace SimpleHttpServer
+namespace Server
 {
     internal static class HttpBuilder
     {

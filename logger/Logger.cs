@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Dynamic;
 using System.IO;
 using System.Text;
-using loader.Models.Configs;
+
 namespace logger
 {
-    public class Logger
+    public static class Logger
     {
+        public static readonly bool IsLoggerStarted = false;
         public static volatile StringBuilder LogContent = new StringBuilder();
         public static volatile StringBuilder FullLog = new StringBuilder();
         public static string LogName = "Events.log";
@@ -28,8 +30,9 @@ namespace logger
             LogContent.AppendLine();
             FullLog.AppendLine();
         }
+
         /// <summary>
-        /// Log showing output to console only when Verbose mode is enabled.
+        /// Log showing output to console only when ]se mode is enabled.
         /// </summary>
         /// <param name="args"></param>
         public static void TalkyLog(params object[] args)
@@ -80,6 +83,7 @@ namespace logger
         /// </summary>
         static Logger()
         {
+            IsLoggerStarted = true;
             Log("Logger initialized.");
             loader.Init.Exit += (x, y) => Save();
         }

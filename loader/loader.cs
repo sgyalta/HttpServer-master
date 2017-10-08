@@ -1,7 +1,7 @@
 ﻿using System;
-using loader.Models.Configs;
 using System.ComponentModel;
 using System.IO;
+using loader.Models.Configs;
 
 namespace loader
 {

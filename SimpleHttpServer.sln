@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpServer", "SimpleHttpServer\SimpleHttpServer.csproj", "{9E139539-C272-488A-BFCF-CADDF458DF9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "server", "SimpleHttpServer\server.csproj", "{9E139539-C272-488A-BFCF-CADDF458DF9D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{170DADDD-BDC9-4FAB-A850-E4E2B8DFF24D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpServer.Test", "SimpleHttpServer.Test\SimpleHttpServer.Test.csproj", "{A04B89BA-8FB7-44F1-8343-BB51ED1017A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpServer.WebApp", "SimpleHttpServer.WebApp\SimpleHttpServer.WebApp.csproj", "{52C884A2-B53B-4893-9F4F-F91F096D00B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "server.WebApp", "SimpleHttpServer.WebApp\server.WebApp.csproj", "{52C884A2-B53B-4893-9F4F-F91F096D00B0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A04B89BA-8FB7-44F1-8343-BB51ED1017A0} = {A04B89BA-8FB7-44F1-8343-BB51ED1017A0}
 	EndProjectSection

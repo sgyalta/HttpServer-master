@@ -8,3 +8,13 @@ C:\Users\sgyal\VS-git\WebC#\HttpServer-master\appobj\bin\Debug\logger.pdb
 C:\Users\sgyal\VS-git\WebC#\HttpServer-master\appobj\obj\Debug\appobj.csprojResolveAssemblyReference.cache
 C:\Users\sgyal\VS-git\WebC#\HttpServer-master\appobj\obj\Debug\appobj.dll
 C:\Users\sgyal\VS-git\WebC#\HttpServer-master\appobj\obj\Debug\appobj.pdb
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\bin\Debug\appobj.dll
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\bin\Debug\appobj.pdb
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\bin\Debug\loader.dll
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\bin\Debug\logger.dll
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\bin\Debug\loader.pdb
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\bin\Debug\logger.pdb
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\obj\Debug\appobj.csprojResolveAssemblyReference.cache
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\obj\Debug\appobj.csproj.CoreCompileInputs.cache
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\obj\Debug\appobj.dll
+C:\Users\sgyal\Source\Repos\HttpServer-master\appobj\obj\Debug\appobj.pdb

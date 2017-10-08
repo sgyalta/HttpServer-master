@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SimpleHttpServer.Models
+namespace Server.Models
 {
     public class HttpRequest
     {
@@ -24,14 +24,14 @@ namespace SimpleHttpServer.Models
             if (string.IsNullOrWhiteSpace(Content))
             {
                 return
-                   $"{Method} {Url} HTTP/1.0\r\n{string.Join("\r\n", Headers.Select(x => string.Format("{0}: {1}", x.Key, x.Value)))}\r\n\r\n{Content}";
+                   $"{Method} {Url} HTTP/1.0\r\n{string.Join("\r\n", Headers.Select(x => $"{x.Key}: {x.Value}"))}\r\n\r\n{Content}";
             }
 
             if (!Headers.ContainsKey("Content-Length"))
                 Headers.Add("Content-Length", Content.Length.ToString());
 
             return
-                $"{Method} {Url} HTTP/1.0\r\n{string.Join("\r\n", Headers.Select(x => string.Format("{0}: {1}", x.Key, x.Value)))}\r\n\r\n{Content}";
+                $"{Method} {Url} HTTP/1.0\r\n{string.Join("\r\n", Headers.Select(x => $"{x.Key}: {x.Value}"))}\r\n\r\n{Content}";
         }
     }
 }

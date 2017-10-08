@@ -3,3 +3,8 @@ C:\Users\sgyal\VS-git\WebC#\HttpServer-master\loader\bin\Debug\loader.pdb
 C:\Users\sgyal\VS-git\WebC#\HttpServer-master\loader\obj\Debug\loader.csproj.CoreCompileInputs.cache
 C:\Users\sgyal\VS-git\WebC#\HttpServer-master\loader\obj\Debug\loader.dll
 C:\Users\sgyal\VS-git\WebC#\HttpServer-master\loader\obj\Debug\loader.pdb
+C:\Users\sgyal\Source\Repos\HttpServer-master\loader\bin\Debug\loader.dll
+C:\Users\sgyal\Source\Repos\HttpServer-master\loader\bin\Debug\loader.pdb
+C:\Users\sgyal\Source\Repos\HttpServer-master\loader\obj\Debug\loader.csproj.CoreCompileInputs.cache
+C:\Users\sgyal\Source\Repos\HttpServer-master\loader\obj\Debug\loader.dll
+C:\Users\sgyal\Source\Repos\HttpServer-master\loader\obj\Debug\loader.pdb

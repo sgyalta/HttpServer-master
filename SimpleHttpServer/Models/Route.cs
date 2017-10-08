@@ -2,7 +2,7 @@
 
 using System;
 
-namespace SimpleHttpServer.Models
+namespace Server.Models
 {
     public class Route
     {

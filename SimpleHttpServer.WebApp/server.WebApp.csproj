@@ -7,8 +7,8 @@
     <ProjectGuid>{52C884A2-B53B-4893-9F4F-F91F096D00B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleHttpServer.WebApp</RootNamespace>
-    <AssemblyName>SimpleHttpServer.WebApp</AssemblyName>
+    <RootNamespace>Server.WebApp</RootNamespace>
+    <AssemblyName>Server.WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -62,9 +62,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
+    <ProjectReference Include="..\SimpleHttpServer\server.csproj">
       <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
-      <Name>SimpleHttpServer</Name>
+      <Name>server</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

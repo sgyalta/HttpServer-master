@@ -1,10 +1,10 @@
 ﻿// Copyright (C) 2016 by Barend Erasmus and donated to the public domain
 
 using System.Collections.Generic;
-using SimpleHttpServer.Models;
-using SimpleHttpServer.RouteHandlers;
+using Server.Models;
+using Server.RouteHandlers;
 
-namespace SimpleHttpServer.WebApp
+namespace Server.WebApp
 {
     internal static class Routes
     {
@@ -13,13 +13,13 @@ namespace SimpleHttpServer.WebApp
                 {
                     new Route
                     {
-                        Callable = request => new FileSystemRouteHandler {BaseUri = "/www"}.Handle(request),
+                        Callable = request => new FileSystemRouteHandler {GetCnt =+1}.HandleGetResponse(request),
                         UrlRegex = "^\\/*\\/(.*)$",
                         Method = "GET"
                     },
                     new Route
                     {
-                        Callable = new FileSystemRouteHandler { BaseUri = @"C:\Users\Barend.Erasmus\Desktop\Test"}.Handle,
+                        Callable = new FileSystemRouteHandler { PostCnt =+1}.HandlePostResponse,
                         UrlRegex = "^\\/*\\/(.*)$",
                         Method = "POST"
                     }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace loader
 {
@@ -101,18 +100,16 @@ namespace loader
 
         public Config(bool autoload)
         {
-            if (autoload)
+            if (!autoload) return;
+            if (!File.Exists(Path.Combine(Environment.CurrentDirectory, $"Configs/{GetType().Name}.cfg")))
             {
-                if (!File.Exists(Path.Combine(Environment.CurrentDirectory, $"Configs/{GetType().Name}.cfg")))
-                {
-                    Save(this);
-                    Deserialize();
-                }
-                else
-                {
-                    Deserialize();
-                    Save(this);
-                }
+                Save(this);
+                Deserialize();
+            }
+            else
+            {
+                Deserialize();
+                Save(this);
             }
         }
     }

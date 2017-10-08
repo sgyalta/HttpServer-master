@@ -37,8 +37,7 @@ namespace appobj
             {
                 if (ch == '\"')
                 {
-                    if (isString) isString = false;
-                    else isString = true;
+                    isString = !isString;
                     temp += ch;
                     continue;
                 }
@@ -62,21 +61,20 @@ namespace appobj
             {
                 CommandQuery.Add(command);
                 foreach (var cmd in CmdList)
-                    if (command.StartsWith(cmd.LeftValue))
-                    {
-                        cmd.RightValue.Invoke(
-                                command.Substring(cmd.LeftValue.Length).TrimStart().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                            );
-                        found = true;
-                        break;
-                    }
-                if (!found)
                 {
-                    if (!command.StartsWith(" "))
-                        Logger.TalkyLog("No commands with the specified name found: " + (command.Contains(" ") ? command.Substring(0, command.IndexOf(' ')) : command));
-                    else
-                        Logger.TalkyLog("Command mustn't start with a space");
+                    if (!command.StartsWith(cmd.LeftValue)) continue;
+                    cmd.RightValue.Invoke(
+                        command.Substring(cmd.LeftValue.Length).TrimStart().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                    );
+                    found = true;
+                    break;
                 }
+
+                if (found) continue;
+                if (!command.StartsWith(" "))
+                    Logger.TalkyLog("No commands with the specified name found: " + (command.Contains(" ") ? command.Substring(0, command.IndexOf(' ')) : command));
+                else
+                    Logger.TalkyLog("Command mustn't start with a space");
             }
             Logger.Save();
         }
@@ -150,7 +148,7 @@ namespace appobj
                             "Description: Allows the user to retrieve values of the variables they stored\n"
                         );
                     return;
-                case 1:
+                default:
                     Logger.Log(Variables[args[0]]);
                     return;
             }
@@ -232,10 +230,11 @@ namespace appobj
         public static void Quit(string[] args)
         {
             Logger.Log("Shuting down....");
-            loader.Init.OnExit();
+           
             Logger.Log("Exited control-thread.");
             Logger.Save();
             Logger.Log("Listener thread exited");
+            loader.Init.OnExit();
             Environment.Exit(0);
         }
     }

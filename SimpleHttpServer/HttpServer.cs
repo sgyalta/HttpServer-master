@@ -1,13 +1,13 @@
 ﻿// Copyright (C) 2016 by David Jeske, Barend Erasmus and donated to the public domain
 
-using log4net;
-using SimpleHttpServer.Models;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using logger;
+using Server.Models;
 
-namespace SimpleHttpServer
+namespace Server
 {
 
     public class HttpServer
@@ -21,7 +21,7 @@ namespace SimpleHttpServer
 
         #endregion
 
-        private static readonly ILog Log = LogManager.GetLogger(typeof(HttpServer));
+        
 
         #region Public Methods
         public HttpServer(int port, IEnumerable<Route> routes)

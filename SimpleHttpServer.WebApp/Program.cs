@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Threading;
-using loader;
 using appobj;
-namespace SimpleHttpServer.WebApp
+using loader;
+
+namespace Server.WebApp
 {
     static class Program
     {
