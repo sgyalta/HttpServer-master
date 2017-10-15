@@ -18,12 +18,13 @@ namespace Server.RouteHandlers
             ServicePointManager.ServerCertificateValidationCallback += ValidateRemoteCertificate;
         }
 
-        public HttpResponse HandleGetResponse(HttpRequest request) {
-            
+        public HttpResponse HandleGetResponse(HttpRequest request)
+        {
+            return null;
         }
         public HttpResponse HandlePostResponse(HttpRequest request)
         {
-            
+            return null;
         }
 
         //private static HttpResponse Handle_LocalFile(string localPath) {        
